@@ -12,8 +12,8 @@ def ren_Homepage():
     return render_template("home.html")
 
 
-app.config["PATH_TO_UPLOAD"] = r"C:\Users\pehli\code\hearapp\app\uploaded_files"
-app.config["PATH_TO_AUDIO"] = r"C:\Users\pehli\code\hearapp\app\audio"
+app.config["PATH_TO_UPLOAD"] = r"C:\Users\pehli\code\audior\app\uploaded_files"
+app.config["PATH_TO_AUDIO"] = r"C:\Users\pehli\code\audior\app\audio"
 
 
 @app.route("/text", methods=["POST"])
@@ -26,8 +26,8 @@ def text():
         audio = textToAudio.covert_to_audio(
             text, app.config["PATH_TO_AUDIO"], t.filename)
 
-        return render_template("text.html", text=text, audio=audio)
-    elif 1+1 == 2:
+        return render_template("text.html", text=text, )
+    else:
         return redirect(request.url)
 
 
