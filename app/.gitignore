@@ -1,3 +1,5 @@
 env
 audio
 uploaded_files
+__pycache__
+src/__pycache__
